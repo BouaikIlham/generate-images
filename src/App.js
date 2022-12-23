@@ -10,13 +10,13 @@ function App() {
   const [image, setimage] = useState();
   const [isLoading, setIsLoading] = useState();
 
-  useEffect (() => {
-    setIsLoading(true)
-    setTimeout(() => {
-      setIsLoading(false)
+  // useEffect (() => {
+  //   setIsLoading(true)
+  //   setTimeout(() => {
+  //     setIsLoading(false)
 
-    }, 3000)
-  }, [])
+  //   }, 3000)
+  // }, [])
 
   const configuration = new Configuration({
     apiKey: process.env.REACT_APP_OPENAI_API_KEY,
@@ -34,7 +34,7 @@ function App() {
   }
   return (
     <div className="mx-8">
-      {isLoading ? <ClimbingBoxLoader />
+      {isLoading ? <div className="flex justify-center"><ClimbingBoxLoader /></div>
       :
         <header className="border-x-4 border-indigo-500 my-2 m-8">
           <div className="flex justify-center text-black-900 uppercase font-black">
